@@ -8,10 +8,6 @@
     <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
   </defs>
   <rect width="800" height="1000" fill="url(#bg)"/>
-  <g fill="none" stroke="#6B6F5A" stroke-width=".7" stroke-linecap="round" opacity=".9">
-    <g transform="translate(520 90) scale(2.6)"><path d="M20 95 C40 70 55 45 85 8"/><path d="M33 78c-10-2-16-9-17-18 9 1 16 8 17 18z"/><path d="M45 62c-2-10 2-19 10-24 2 9-2 18-10 24z"/><path d="M52 52c-10-1-17-7-19-16 9 0 17 6 19 16z"/><path d="M64 36c-1-9 4-17 12-21 1 9-4 17-12 21z"/><path d="M70 28c-8-2-13-8-14-15 8 1 13 7 14 15z"/></g>
-    <g transform="translate(250 560) scale(-2 2)"><path d="M20 95 C40 70 55 45 85 8"/><path d="M33 78c-10-2-16-9-17-18 9 1 16 8 17 18z"/><path d="M45 62c-2-10 2-19 10-24 2 9-2 18-10 24z"/><path d="M52 52c-10-1-17-7-19-16 9 0 17 6 19 16z"/><path d="M64 36c-1-9 4-17 12-21 1 9-4 17-12 21z"/><path d="M70 28c-8-2-13-8-14-15 8 1 13 7 14 15z"/></g>
-  </g>
   <ellipse cx="400" cy="856" rx="150" ry="16" fill="#000" opacity=".16" filter="url(#soft)"/>
   <path d="M452 262 L320 262 Q292 262 290 274 L290 282 Q294 290 312 288 L350 286 L350 300 L452 300 Z" fill="url(#black)"/>
   <rect x="340" y="296" width="120" height="44" rx="8" fill="url(#black)"/>
