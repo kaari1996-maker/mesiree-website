@@ -43,7 +43,8 @@ function productImage(product, className) {
     return img;
   }
   // Product picture standing in front of a blurred nature photo
-  return el("div", { class: "scene " + className, style: "--backdrop:url('" + product.backdrop + "')" }, img);
+  const blur = product.backdropBlur ? ";--blur:" + product.backdropBlur + "px" : "";
+  return el("div", { class: "scene " + className, style: "--backdrop:url('" + product.backdrop + "')" + blur }, img);
 }
 
 function updateCartCount() {
