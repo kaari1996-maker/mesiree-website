@@ -92,7 +92,7 @@ function renderProduct() {
 
   const sizeBox = document.getElementById("p-sizes");
   if (p.sizes.length === 0) {
-    document.getElementById("p-size-group").hidden = true;
+    document.getElementById("p-size-group").style.display = "none";
   } else {
     const drawSizes = () => {
       sizeBox.replaceChildren(...p.sizes.map((s) =>
