@@ -96,7 +96,7 @@ img { max-width: 100%; display: block; }
   flex: 1 1 440px; height: 560px; background: var(--stone); position: relative;
   display: flex; align-items: flex-end; justify-content: center; overflow: hidden;
 }
-.hero-stage img { width: 100%; height: 100%; object-fit: cover; object-position: center 70%; }
+.sprig { position: absolute; }
 .bottle { position: relative; display: flex; flex-direction: column; align-items: center; margin-bottom: 64px; }
 .bottle .pump { width: 36px; height: 44px; background: var(--white); border: 1px solid var(--line); border-bottom: 0; border-radius: 10px 10px 0 0; }
 .bottle .neck { width: 70px; height: 34px; background: var(--white); border: 1px solid var(--line); border-bottom: 0; border-radius: 4px 4px 0 0; }
@@ -149,8 +149,6 @@ img { max-width: 100%; display: block; }
 /* Newsletter */
 .newsletter { background: var(--stone); }
 .newsletter .container { max-width: 720px; padding-top: 88px; padding-bottom: 88px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; }
-
-.photo-credits { padding-top: 0; padding-bottom: 28px; font-size: 11px; color: var(--muted); }
 .newsletter h2 { margin: 0; font-weight: 300; font-size: 32px; }
 .newsletter h2 .script { font-size: 1.5em; }
 .newsletter p { margin: 0; color: var(--muted); font-size: 16px; }
@@ -176,20 +174,6 @@ img { max-width: 100%; display: block; }
 .gallery { flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
 .gallery .main { aspect-ratio: 1 / 1; background: var(--stone); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
 .gallery .main img { width: 100%; height: 100%; object-fit: cover; }
-.credit { margin: -4px 0 0; font-size: 11px; color: var(--muted); }
-
-/* Product picture in front of a blurred nature photo (--backdrop is set per product) */
-.scene { position: relative; overflow: hidden; background: #CFC8BA; }
-.scene::before {
-  content: ""; position: absolute; inset: -24px;
-  background: var(--backdrop) center / cover no-repeat;
-  filter: blur(var(--blur, 4px)) saturate(.85) brightness(1.04);
-}
-.scene::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,250,240,.10), rgba(40,32,20,.10)); }
-.scene img, .gallery .scene img, .hero-stage.scene img {
-  position: relative; z-index: 1; display: block;
-  width: 100%; height: 100%; object-fit: contain; object-position: center bottom;
-}
 .thumbs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 .thumbs .ph { aspect-ratio: 1 / 1; }
 .info { flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }
