@@ -147,8 +147,26 @@ img { max-width: 100%; display: block; }
 .story-text p { margin: 0; font-size: 16px; line-height: 1.8; color: #CFCFC8; }
 
 /* Newsletter */
-.newsletter { background: var(--stone); }
-.newsletter .container { max-width: 720px; padding-top: 88px; padding-bottom: 88px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.newsletter { background: var(--stone) var(--photo, none) center / cover no-repeat; padding: 96px 16px; }
+.newsletter .container {
+  max-width: 680px; padding-top: 56px; padding-bottom: 56px; text-align: center;
+  display: flex; flex-direction: column; align-items: center; gap: 14px;
+  background: rgba(255, 255, 255, .9); backdrop-filter: blur(6px);
+}
+
+/* Full-width nature photo with text */
+.banner {
+  position: relative; min-height: 520px; display: flex; align-items: center;
+  background: #3A3A36 var(--photo) center / cover no-repeat; color: var(--white); text-align: center;
+}
+.banner::before { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.15), rgba(0,0,0,.45)); }
+.banner .container { position: relative; display: flex; flex-direction: column; align-items: center; gap: 14px; padding-top: 96px; padding-bottom: 96px; }
+.banner .eyebrow { color: rgba(255,255,255,.85); }
+.banner h2 { margin: 0; font-weight: 300; font-size: clamp(30px, 4vw, 44px); }
+.banner h2 .script { font-size: 1.5em; }
+.banner p { margin: 0; max-width: 520px; font-size: 16px; line-height: 1.7; color: rgba(255,255,255,.9); }
+.banner-credit { position: absolute; right: 16px; bottom: 12px; font-size: 11px; color: rgba(255,255,255,.75); }
+.photo-credits { padding-top: 0; padding-bottom: 28px; font-size: 11px; color: var(--muted); }
 .newsletter h2 { margin: 0; font-weight: 300; font-size: 32px; }
 .newsletter h2 .script { font-size: 1.5em; }
 .newsletter p { margin: 0; color: var(--muted); font-size: 16px; }
@@ -174,6 +192,20 @@ img { max-width: 100%; display: block; }
 .gallery { flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 14px; }
 .gallery .main { aspect-ratio: 1 / 1; background: var(--stone); position: relative; overflow: hidden; display: flex; align-items: center; justify-content: center; }
 .gallery .main img { width: 100%; height: 100%; object-fit: cover; }
+.credit { margin: -4px 0 0; font-size: 11px; color: var(--muted); }
+
+/* Product picture in front of a blurred nature photo (--backdrop is set per product) */
+.scene { position: relative; overflow: hidden; background: #CFC8BA; }
+.scene::before {
+  content: ""; position: absolute; inset: -24px;
+  background: var(--backdrop) center / cover no-repeat;
+  filter: blur(4px) saturate(.85) brightness(1.04);
+}
+.scene::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(255,250,240,.10), rgba(40,32,20,.10)); }
+.scene img, .gallery .scene img, .hero-stage.scene img {
+  position: relative; z-index: 1; display: block;
+  width: 100%; height: 100%; object-fit: contain; object-position: center bottom;
+}
 .thumbs { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; }
 .thumbs .ph { aspect-ratio: 1 / 1; }
 .info { flex: 1 1 400px; min-width: 0; display: flex; flex-direction: column; gap: 20px; }

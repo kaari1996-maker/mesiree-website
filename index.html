@@ -8,7 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css?v=6">
+  <link rel="stylesheet" href="style.css?v=7">
 </head>
 <body>
 
@@ -43,8 +43,8 @@
         </div>
       </div>
       <!-- Mock-up picture: replace with a product photo when you have one -->
-      <div class="hero-stage">
-        <img src="body-lotion.svg?v=3" alt="Mesirée by P body lotion on a stone plinth">
+      <div class="hero-stage scene" style="--backdrop:url('https://images.unsplash.com/photo-1668166220035-0b2a40840d5a?w=1400&q=75&auto=format&fit=crop')">
+        <img src="body-lotion.svg?v=4" alt="Mesirée by P body lotion on a stone plinth by the sea">
       </div>
     </section>
 
@@ -67,6 +67,16 @@
           <p>[Where the plants and raw materials come from]</p>
         </div>
       </div>
+    </section>
+
+    <!-- Nature banner -->
+    <section class="banner" style="--photo:url('https://images.unsplash.com/photo-1650231911366-26283c534488?w=2000&q=75&auto=format&fit=crop')">
+      <div class="container">
+        <span class="eyebrow">Sea · Forest · Shore</span>
+        <h2>Rooted in <span class="script">Estonian nature</span></h2>
+        <p>[A line about the coast and forests your ingredients and ideas come from.]</p>
+      </div>
+      <small class="banner-credit">Pebble beach in Tallinn · Janek Valdsalu (Unsplash)</small>
     </section>
 
     <!-- All products (filled in from products.js) -->
@@ -93,9 +103,8 @@
     </section>
 
     <!-- Newsletter -->
-    <section class="newsletter">
+    <section class="newsletter" style="--photo:url('https://images.unsplash.com/photo-1696962536109-0ed3260c13fc?w=2000&q=75&auto=format&fit=crop')">
       <div class="container">
-        <svg width="64" height="40" viewBox="0 0 100 60" fill="none" stroke="#6B6F5A" stroke-width="1" stroke-linecap="round" aria-hidden="true"><path d="M10 50 Q50 40 90 10"/><path d="M30 44c-4-8-2-16 6-20 3 8 0 16-6 20z"/><path d="M50 36c-2-9 2-16 10-19 2 8-2 16-10 19z"/><path d="M70 24c-1-8 3-14 10-16 1 7-3 14-10 16z"/></svg>
         <h2>New batches, <span class="script">first</span></h2>
         <p>Get a note when new products are ready.</p>
         <!-- Not connected yet: needs a newsletter service (e.g. Mailchimp) -->
@@ -129,9 +138,10 @@
         <a href="[instagram link]">Instagram</a>
       </div>
     </div>
+    <p class="container photo-credits">Nature photos of Estonia from Unsplash by Maksim Shutov, Artur Alexander Holmski, Carlos Torres and Janek Valdsalu.</p>
   </footer>
 
-  <script src="products.js?v=6"></script>
-  <script src="site.js?v=6"></script>
+  <script src="products.js?v=7"></script>
+  <script src="site.js?v=7"></script>
 </body>
 </html>

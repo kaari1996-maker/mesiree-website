@@ -36,8 +36,14 @@ function el(tag, attrs, ...children) {
 }
 
 function productImage(product, className) {
-  if (product.image) return el("img", { src: product.image, alt: product.name, class: className });
-  return el("div", { class: "ph " + className }, "Product photo");
+  if (!product.image) return el("div", { class: "ph " + className }, "Product photo");
+  const img = el("img", { src: product.image, alt: product.name });
+  if (!product.backdrop) {
+    img.setAttribute("class", className);
+    return img;
+  }
+  // Product picture standing in front of a blurred nature photo
+  return el("div", { class: "scene " + className, style: "--backdrop:url('" + product.backdrop + "')" }, img);
 }
 
 function updateCartCount() {
@@ -84,7 +90,8 @@ function renderProduct() {
   document.getElementById("p-howto").textContent = p.howToUse;
   if (p.image) {
     const main = document.getElementById("p-image");
-    main.replaceChildren(el("img", { src: p.image, alt: p.name }));
+    main.replaceWith(productImage(p, "main"));
+    if (p.backdropCredit) document.getElementById("p-credit").textContent = "Background: " + p.backdropCredit;
   }
 
   const tags = document.getElementById("p-tags");

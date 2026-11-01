@@ -14,11 +14,6 @@
     <filter id="travertine"><feTurbulence type="fractalNoise" baseFrequency=".006 .09" numOctaves="3" seed="44"/><feColorMatrix values="0 0 0 0 .45  0 0 0 0 .4  0 0 0 0 .33  0 0 0 1.4 -.55"/></filter>
     <clipPath id="plinth"><path d="M220 852 A180 34 0 0 0 580 852 L580 1040 L220 1040 Z"/><ellipse cx="400" cy="852" rx="180" ry="34"/></clipPath>
   </defs>
-  <rect width="800" height="1000" fill="url(#bg)"/>
-  <rect width="800" height="1000" fill="url(#sun)"/>
-  <g opacity=".10" filter="url(#blurFar)"><g transform="translate(629 314) rotate(164)"><path d="M0 0 Q260 42 520 0" fill="none" stroke="#2B2822" stroke-width="5"/><ellipse cx="51" cy="0" rx="56" ry="19" fill="#2B2822" transform="translate(87 12) rotate(41)"/><ellipse cx="41" cy="0" rx="45" ry="15" fill="#2B2822" transform="translate(173 18) rotate(-42)"/><ellipse cx="44" cy="0" rx="48" ry="16" fill="#2B2822" transform="translate(260 21) rotate(42)"/><ellipse cx="38" cy="0" rx="41" ry="14" fill="#2B2822" transform="translate(347 18) rotate(-40)"/><ellipse cx="36" cy="0" rx="39" ry="13" fill="#2B2822" transform="translate(433 12) rotate(35)"/><ellipse cx="55" cy="0" rx="61" ry="20" fill="#2B2822" transform="translate(520 0)"/></g></g>
-  <g opacity=".17" filter="url(#blurNear)"><g transform="translate(583 39) rotate(150)"><path d="M0 0 Q310 50 620 0" fill="none" stroke="#2B2822" stroke-width="5"/><ellipse cx="49" cy="0" rx="53" ry="18" fill="#2B2822" transform="translate(103 14) rotate(42)"/><ellipse cx="61" cy="0" rx="66" ry="22" fill="#2B2822" transform="translate(207 22) rotate(-40)"/><ellipse cx="51" cy="0" rx="55" ry="18" fill="#2B2822" transform="translate(310 25) rotate(45)"/><ellipse cx="44" cy="0" rx="49" ry="16" fill="#2B2822" transform="translate(413 22) rotate(-41)"/><ellipse cx="37" cy="0" rx="40" ry="13" fill="#2B2822" transform="translate(517 14) rotate(39)"/><ellipse cx="60" cy="0" rx="66" ry="22" fill="#2B2822" transform="translate(620 0)"/></g></g>
-  <rect width="800" height="1000" filter="url(#grain)" opacity=".18"/>
   <ellipse cx="400" cy="1000" rx="220" ry="30" fill="#000" opacity=".10" filter="url(#soft)"/>
   <g clip-path="url(#plinth)">
     <rect x="220" y="812" width="360" height="268" fill="url(#stone)"/>
