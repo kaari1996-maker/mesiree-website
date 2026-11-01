@@ -8,7 +8,7 @@
     kind        short line under the name, e.g. "Face oil · 30 ml"
     price       a number in euros, e.g. 24.90 — or null to show "Price coming soon"
     sizes       list of sizes, or [] if there is only one
-    image       path to a photo in the images folder, e.g. "images/face-oil.jpg" — or null
+    image       file name of a photo uploaded next to this file, e.g. "face-oil.jpg" — or null
     tagline, description, tags, ingredients, howToUse: text for the product page
 
   Everything in [square brackets] is a placeholder for you to replace.
