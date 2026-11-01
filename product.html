@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product — Mesirée by P</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Allura&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="logo" href="index.html" aria-label="Mesirée by P, home">
+        <span class="script">Mesirée</span><small>by</small><span class="script">P</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="index.html#shop">Shop</a>
+        <a href="index.html#story">Our story</a>
+        <a href="index.html#ingredients">Ingredients</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="cart-link" href="cart.html" aria-label="Cart">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 7h12l-1 13H7L6 7z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+          <span class="cart-count">0</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- The product shown is chosen by ?id=... in the address; text comes from js/products.js -->
+  <main id="product" class="container">
+    <span class="crumbs"><a href="index.html">Home</a> / <a href="index.html#shop">Shop</a> / <span id="crumb-name"></span></span>
+
+    <div class="product">
+      <div class="gallery">
+        <div id="p-image" class="main">
+          <svg class="sprig" width="240" height="240" viewBox="0 0 100 100" fill="none" stroke="#6B6F5A" stroke-width=".6" stroke-linecap="round" aria-hidden="true" style="left:-20px; bottom:-10px"><path d="M20 95 C40 70 55 45 85 8"/><path d="M33 78c-10-2-16-9-17-18 9 1 16 8 17 18z"/><path d="M45 62c-2-10 2-19 10-24 2 9-2 18-10 24z"/><path d="M52 52c-10-1-17-7-19-16 9 0 17 6 19 16z"/><path d="M64 36c-1-9 4-17 12-21 1 9-4 17-12 21z"/><path d="M70 28c-8-2-13-8-14-15 8 1 13 7 14 15z"/></svg>
+          <span class="eyebrow" style="position:relative">Product photo</span>
+        </div>
+        <div class="thumbs">
+          <div class="ph">Texture</div>
+          <div class="ph">In use</div>
+          <div class="ph">Nature</div>
+          <div class="ph">Detail</div>
+        </div>
+      </div>
+
+      <div class="info">
+        <span id="p-category" class="eyebrow"></span>
+        <h1 id="p-name"></h1>
+        <span id="p-tagline" class="script tagline"></span>
+        <span id="p-price" class="price"></span>
+        <p id="p-desc" class="desc"></p>
+        <div id="p-tags" class="tags"></div>
+
+        <div id="p-size-group" style="display:flex; flex-direction:column; gap:10px; margin-top:6px">
+          <span class="eyebrow" style="color:#111111">Size</span>
+          <div id="p-sizes" class="options" role="group" aria-label="Size"></div>
+        </div>
+
+        <div class="buy">
+          <div class="stepper">
+            <button id="p-dec" type="button" aria-label="Decrease quantity">−</button>
+            <span id="p-qty" aria-live="polite">1</span>
+            <button id="p-inc" type="button" aria-label="Increase quantity">+</button>
+          </div>
+          <button id="p-add" type="button" class="btn">Add to cart</button>
+        </div>
+        <div id="p-added" class="added" aria-live="polite"></div>
+        <span class="note">[Shipping note — e.g. ships in X days · free over X]</span>
+
+        <div style="margin-top:14px">
+          <details open><summary>Ingredients</summary><p id="p-ingredients"></p></details>
+          <details><summary>How to use</summary><p id="p-howto"></p></details>
+          <details><summary>Shipping &amp; returns</summary><p>[Delivery times and return policy]</p></details>
+        </div>
+      </div>
+    </div>
+
+    <section class="section">
+      <div class="section-head" style="margin-bottom:40px">
+        <h2>You might <span class="script">also like</span></h2>
+      </div>
+      <div id="related" class="product-grid"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container" style="display:flex; flex-wrap:wrap; justify-content:space-between; padding-top:28px; padding-bottom:28px; color:#5A5A55">
+      <span>© Mesirée by P</span>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>
